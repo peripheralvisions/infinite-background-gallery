@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
-
-import logo from './logo.svg';
 import './App.scss';
 
 // C O M P O N E N T S 
