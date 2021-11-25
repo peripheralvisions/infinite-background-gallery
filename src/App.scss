@@ -1,0 +1,10 @@
+*,
+*::before,
+*::after {
+  // content: 
+  box-sizing: border-box;
+}
+
+.overlay {
+  pointer-events: none0;
+}

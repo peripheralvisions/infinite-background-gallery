@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(12, 12, 12);
+    overflow: hidden;
+}
+
+html, body, #root {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    opacity: 0.4;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%,0) rotate(22.5deg);;
+
+
+    .gallery--line {
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-name: runner;
+        animation-timing-function: linear;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        transform: translateX(25%);
+
+        .gallery--line-img {
+            height: 35vh;
+            width: 35vh;
+            border-radius: 20vh;
+            margin: 3vw;
+            background-size: cover;
+            background-position: center;
+            transition: border-radius 1.3s ease, box-shadow 0.4s ease;
+        }
+
+        .gallery--line-img-large {
+            width: 50vw;
+        }
+
+        &:nth-child(2) {
+            animation-duration: 12s;
+        }
+
+        &:nth-child(3) {
+            animation-duration: 14s;
+        }
+    }
+
+}
+
+@keyframes runner {
+    to {
+        transform: translateX(-25%);
+    }
+}
