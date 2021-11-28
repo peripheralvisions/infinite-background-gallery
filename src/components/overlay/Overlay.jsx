@@ -55,9 +55,12 @@ export const overlayClose = () => {
         })
 }
 
-function Overlay() {
+function Overlay({defaultOpen = false}) {
 
     pathRef = useRef();
+
+    const hiddenPath = "M 0 100 V 100 Q 50 100 100 100 V 100 z";
+    const openPath = "M 0 100 V 0 Q 50 0 100 0 V 100 z";
 
     return (
         <svg
@@ -74,7 +77,9 @@ function Overlay() {
             <path
                 ref={pathRef}
                 className="overlay__path"
-                d="M 0 100 V 100 Q 50 100 100 100 V 100 z"></path>
+                d={`${defaultOpen ? openPath : hiddenPath}`}
+                
+                ></path>
         </svg>
     )
 }

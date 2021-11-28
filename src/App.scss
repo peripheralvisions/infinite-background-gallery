@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$color-menu: #7ec59d;
+
 .overlay {
   pointer-events: none;
 }
@@ -12,6 +16,10 @@
 body {
   background-color: rgb(12, 12, 12);
   overflow: hidden;
+  color: white;
+  // padding: 25px;
+  // transition: padding 2s ease;
+  font-family: 'Playfair Display', serif;
 }
 
 html, body, #root {
@@ -19,4 +27,68 @@ html, body, #root {
   height: 100%;
   width: 100%;
   overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  line-height: 1;
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:visited {
+    color: $color-menu;
+  }
+}
+
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  nav {
+    font-size: 14vh;
+    ul {
+      text-align: center;
+      li {
+        font-weight: light;
+        line-height: 1;
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .panel-top {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .panel-bottom {
+    opacity: 0.6;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+  }
 }

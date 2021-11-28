@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Gallery.scss"
 
-function Gallery() {
+function Gallery({images}) {
 
-    const data = [
+    const demoData = [
         [
             "https://images.unsplash.com/photo-1635178792420-b90837a4e5d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzNzU2ODE3NQ&ixlib=rb-1.2.1&q=80&w=1080",
             "https://images.unsplash.com/photo-1637497392084-8a028de000d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzNzU2ODU2Nw&ixlib=rb-1.2.1&q=80&w=1080",
@@ -21,7 +21,9 @@ function Gallery() {
             "https://images.unsplash.com/photo-1522775417749-29284fb89f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmludGFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60",
             "https://images.unsplash.com/photo-1522775417749-29284fb89f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmludGFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=400&q=60"
         ],
-    ]
+    ];
+
+    const data = images || demoData;
 
     const LineRow = ({ items }) => {
 
