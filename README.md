@@ -9,3 +9,4 @@ Made with :
 Demo:
 
 ![Demo Gif](https://thumbs.gfycat.com/RemarkablePiercingConey-size_restricted.gif)
+![Demo](https://i.imgur.com/TUnk8oW.png)
